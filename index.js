@@ -50,7 +50,8 @@ function copy(arr){
   return flavorsCopy
 }    
 
-
+let flavorsCopy = (copy(originalFlavors));
+// console.log(flavorsCopy);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -71,7 +72,7 @@ function is31Flavors(arr){
     return false
   }
 }
-console.log(is31Flavors(originalFlavors));
+// console.log(is31Flavors(flavorsCopy));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,9 +89,11 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(arr, string){
-//  return arr.push(string)
+  arr.unshift(string)
+  return arr
 }
-// console.log(addFlavor(flavorsCopy, 'Rainbow Sherbert'))
+// console.log(addFlavor(flavorsCopy, 'test'));
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -104,8 +107,9 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arr){
+  arr.pop();
+  return arr;
 }
 
 
