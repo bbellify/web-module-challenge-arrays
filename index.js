@@ -46,11 +46,12 @@ Use the copy function below to do the following:
 */
 
 function copy(arr){
-  const flavorsCopy = [...arr];
-  return flavorsCopy
+  return [...arr]
+  // const flavorsCopy = [...arr];
+  // return flavorsCopy
 }    
 
-let flavorsCopy = (copy(originalFlavors));
+// let flavorsCopy = (copy(originalFlavors));
 // console.log(flavorsCopy);
 
 
@@ -68,11 +69,17 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 function is31Flavors(arr){
   if (arr.length === 31) {
     return true
-  } else {
+  }  else {
     return false
   }
 }
-// console.log(is31Flavors(flavorsCopy));
+
+  // if (arr.length === 31) {
+  //   return true
+  // } else {
+  //   return false
+  // }
+console.log(is31Flavors(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -89,9 +96,15 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(arr, string){
-  arr.unshift(string)
-  return arr
+  arr.unshift(string);
+  return arr 
 }
+
+  
+
+
+  // arr.unshift(string)
+  // return arr
 // console.log(addFlavor(flavorsCopy, 'test'));
 
 
@@ -109,8 +122,13 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(arr){
   arr.pop();
-  return arr;
+  return arr; 
 }
+
+
+ 
+  // arr.pop();
+  // return arr;
 
 
 
@@ -126,10 +144,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(arr, index){
-  return arr[index]
-}
+ return arr[index]
+}  
+  // return arr[index]
 
 
+console.log(getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -147,12 +167,23 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
+
+
+
 function removeFlavorByName(arr, string){
-  let index = arr.indexOf(string);
-  if (index > -1) {
-    arr.splice(index, 1)
+  for (let i = 0; i < arr.length; i++ ) {
+    if (arr[i] === string) {
+      arr.splice(i, 1);
+    }
   } return arr
-}
+}  
+
+  
+  // let index = arr.indexOf(string);
+  // if (index > -1) {
+  //   arr.splice(index, 1)
+  // } return arr
+
 
 // console.log(removeFlavorByName(flavorsCopy, 'Banana Nut Fudge'));
 
@@ -179,14 +210,26 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr, string){
-  const newArray = [];
+  let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].includes(string) === true) {
-      newArray.push(arr[i])
-    }
-  }
-  return newArray;
-}
+    if (arr[i].includes(string)) {
+      newArray.push(arr[i]) }
+    } return newArray
+  } 
+  
+
+
+
+
+
+  
+  // const newArray = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i].includes(string) === true) {
+  //     newArray.push(arr[i])
+  //   }
+  // }
+  // return newArray;
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
